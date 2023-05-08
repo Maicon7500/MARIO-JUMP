@@ -1,5 +1,3 @@
-const gameBoard = document.querySelector('.game-board');
-
 const mario = document.querySelector('.mario');
 
 const pipe = document.querySelector('.pipe');
@@ -38,5 +36,6 @@ const loop = setInterval(() => {
 
 }, 10);
 
-gameBoard.addEventListener('touchstart', () =>;
+document.addEventListener('touchstart', () =>;
+
 document.addEventListener('keydown', jump);
