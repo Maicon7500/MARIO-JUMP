@@ -28,8 +28,8 @@ const loop = setInterval(() => {
     mario.style.bottom = `${marioPosition}px`;
 
     mario.src = './images/game-over.png';
-    mario.style.width = '115px';
-    margin.style.marginLeft = '50px';
+    mario.style.width = '80px';
+    margin.style.marginLeft = '90px';
 
     const tryAgainButton = document.createElement('button');
     tryAgainButton.innerText = 'Try again';
