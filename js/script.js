@@ -1,3 +1,8 @@
+const tryAgainBtn 
+
+
+const try-again = document.getElementById('.try-again');
+
 const mario = document.querySelector('.mario');
 
 const pipe = document.querySelector('.pipe');
@@ -37,4 +42,10 @@ const loop = setInterval(() => {
 }, 10);
 
 document.addEventListener('click', jump);
+
 document.addEventListener('keydown', jump);
+
+try-again.addEventListener('click', () => {
+  // Reiniciar o jogo
+  location.reload();
+});
