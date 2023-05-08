@@ -28,7 +28,7 @@
 }
 
 .jump{
-    animation: jump 500s ease-out;
+    animation: jump 500ms ease-out;
 
 }
 
