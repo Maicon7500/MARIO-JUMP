@@ -28,16 +28,21 @@ const loop = setInterval(() => {
     mario.style.bottom = `${marioPosition}px`;
 
     mario.src = './images/game-over.png';
-    mario.style.width = '80px';
-    margin.style.marginLeft = '90px';
+    mario.style.width = '140px';
+    margin.style.marginLeft = '80px';
 
     const tryAgainButton = document.createElement('button');
-    tryAgainButton.innerText = 'Try again';
-    tryAgainButton.addEventListener('click', restartGame);
-    margin.appendChild(tryAgainButton);
-
-    clearInterval(loop);
-  }
+  tryAgainButton.innerText = 'Try again';
+  tryAgainButton.addEventListener('click', restartGame);
+  tryAgainButton.style.position = 'absolute';
+  tryAgainButton.style.top = '50%';
+  tryAgainButton.style.left = '50%';
+  tryAgainButton.style.transform = 'translate(-50%, -50%)';
+  tryAgainButton.style.fontSize = '24px';
+  tryAgainButton.style.padding = '16px 32px';
+  margin.appendChild(tryAgainButton);
+  clearInterval(loop);
+};
 }, 10);
   
 document.addEventListener('click', jump);

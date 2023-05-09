@@ -2,6 +2,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    
 }
 
 .game-board{
@@ -18,7 +19,7 @@
     position: absolute;
     bottom: 0;
     width: 80px;
-    animation: pipe-animation 10s infinite linear;
+    animation: pipe-animation 1.2s infinite linear;
 }
 
 .mario {
@@ -28,7 +29,7 @@
 }
 
 .jump{
-    animation: jump 700ms ease-out;
+    animation: jump 500ms ease-out;
 
 }
 
