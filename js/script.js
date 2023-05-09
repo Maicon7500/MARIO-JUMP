@@ -12,6 +12,7 @@ const jump = () => {
 
 const restartGame = () => {
   window.location.reload();
+  
 };
 
 const loop = setInterval(() => {
@@ -27,9 +28,10 @@ const loop = setInterval(() => {
     mario.style.animation = 'none';
     mario.style.bottom = `${marioPosition}px`;
 
-    mario.src = './images/game-over.png';
+    mario.src = './images/game-over.gif';
     mario.style.width = '140px';
-    margin.style.marginLeft = '80px';
+    
+    margin.style.marginLeft = 'px';
 
     const tryAgainButton = document.createElement('button');
   tryAgainButton.innerText = 'Try again';
@@ -42,6 +44,7 @@ const loop = setInterval(() => {
   tryAgainButton.style.padding = '16px 32px';
   margin.appendChild(tryAgainButton);
   clearInterval(loop);
+  musica1.pause(); // pausa a música ao reiniciar o jogo
 };
 }, 10);
   
