@@ -40,6 +40,35 @@
 
 }
 
+.coin {
+    width: 50px;
+    height: 50px;
+    background-image: url("coin.png");
+    background-size: cover;
+    position: absolute;
+    bottom: 170px;
+    animation: coin-animation 2s infinite linear;
+  }
+
+  .score {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    font-size: 24px;
+    font-weight: bold;
+  }
+
+  @keyframes coin-animation {
+    
+    from{
+        right: -400px;
+    }
+
+    to{
+        right:100%
+    }
+  }
+
 @keyframes pipe-animation {
 
     from{

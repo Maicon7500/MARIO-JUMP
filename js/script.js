@@ -1,6 +1,34 @@
 const mario = document.querySelector('.mario');
 const pipe = document.querySelector('.pipe');
 const margin = document.querySelector('.game-board');
+//coin
+const coin = document.querySelector('.coin');
+const scoreDisplay = document.querySelector('.score');
+
+let score = 0;
+
+const collectCoin = () => {
+  score++;
+  scoreDisplay.textContent = score;
+  coin.style.display = 'none';
+}
+
+const checkCollision = () => {
+  const marioRect = mario.getBoundingClientRect();
+  const coinRect = coin.getBoundingClientRect();
+
+  if (marioRect.bottom >= coinRect.top && 
+      marioRect.top <= coinRect.bottom &&
+      marioRect.right >= coinRect.left &&
+      marioRect.left <= coinRect.right) {
+        collectCoin();
+      }
+}
+
+
+
+setInterval(checkCollision, 10);
+//coin 
 
 const jump = () => {
   mario.classList.add('jump');
@@ -51,3 +79,10 @@ const loop = setInterval(() => {
 document.addEventListener('click', jump);
 
 document.addEventListener('keydown', jump);
+
+coin.addEventListener('click', () => {
+  coin.remove();
+  score += 1;
+  const scoreElement = document.querySelector('.score');
+  scoreElement.textContent = `Score: ${score}`;
+});
